@@ -13,7 +13,8 @@ const UserSchema = new Schema({
         Default: 'no photo'
     },
     role: {
-        type: String
+        type: String,
+        Default: 'user'
     },
 });
 
