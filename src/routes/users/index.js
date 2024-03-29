@@ -29,7 +29,20 @@ router.post('/users', async (req, res) => {
 
 })
 
+router.delete('/allUserDelete/:id', async (req, res) => {
 
+    try {
+        // console.log(req.params.id)
+        // const id = req.params.id;
+        // const filter = { _id: new ObjectId(id) };
+        const result = await UserData.deleteOne({ _id: req.params.id });
+        res.send(result);
+    }
+    catch (error) {
+        console.error('Error deleting data:', error.message);
+    }
+
+})
 
 
 
